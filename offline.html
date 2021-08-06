@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        body {
+
+            background-image: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div style="position: absolute;
+    z-index: 12;
+    background-color: gold;
+    font-size: x-large;
+    padding: 5px;
+    bottom: 0;
+    left: 0;">
+            OFF-LINE
+        </div>
+    </header>
+    <!-- main -->
+    <main>
+        <!-- player 1 -->
+        <section class="player player--0 player--active">
+            <h2 class="name" id="name--0">Player 1</h2>
+            <p class="score" id="score--0">43</p>
+            <div class="current">
+                <p class="current-label">Current</p>
+                <p class="current-score" id="current--0">0</p>
+            </div>
+        </section>
+        <!-- !player 1 -->
+        <!-- player 2 -->
+        <section class="player player--1">
+            <h2 class="name" id="name--1">Player 2</h2>
+            <p class="score" id="score--1">24</p>
+            <div class="current">
+                <p class="current-label">Current</p>
+                <p class="current-score" id="current--1">0</p>
+            </div>
+        </section>
+        <!-- !player 2 -->
+
+        <img src="#" alt="Playing dice" class="dice" />
+        <button class="btn btn--new" style="margin-top: 10px;">🔄 New game</button>
+        <button class="btn btn--roll">🎲 Roll dice</button>
+        <button class="btn btn--hold">📥 Hold</button>
+    </main>
+    <!-- !main -->
+    <script src="/assets/js/script.js"></script>
+</body>
+
+</html>

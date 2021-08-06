@@ -1,10 +1,15 @@
-const PREF = "P_Gv1.1";
+const PREF = "P_Gv1.4.1";
 const BASE_URL = location.protocol + "//" + location.host;
 const CACHE_FILES = [
-    "assets/css/style.css", "/assets/js/script.js",
-    BASE_URL + '/assets/images/icons/512.png'
+    BASE_URL + "/assets/css/style.css",
+    BASE_URL + "/assets/js/script.js",
+    BASE_URL + "/assets/images/icons/512.png",
+    "https://fonts.googleapis.com/css2?family=Nunito&display=swap"
 ];
 
+console.log(BASE_URL + "/assets/css/style.css");
+console.log(BASE_URL + "/assets/js/script.js");
+console.log(BASE_URL + "/assets/images/icons/512.png");
 self.addEventListener("install", (event) => {
     self.skipWaiting();
     event.waitUntill((async () => {
@@ -30,26 +35,25 @@ self.addEventListener("activate", (e) => {
     console.log(PREF + ' activate');
 });
 
-self.addEventListener("fetch", (e) => {
-    // console.log("This is first");
-    console.log("Fetching: " + e.request.url + " Mode " + e.request.mode);
-    if (e.request.mode == "navigate") {
-        e.respondWith(
+self.addEventListener("fetch", (event) => {
+    console.log(PREF + ' Fetching :' + event.request.url + ' , Mode : ' + event.request.mode);
+    if (event.request.mode == "navigate") {
+        event.respondWith(
             (async () => {
                 try {
-                    const preloadRespond = await e.preloadResponse;
+                    const preloadRespond = await event.preloadResponse;
                     if (preloadRespond) {
                         return preloadRespond;
                     }
-                    return await fetch(e.request);
+                    return await fetch(event.request);
                 } catch (error) {
                     const cache = await caches.open(PREF);
-                    return await cache.match("/offline.html");
+                    return await cache.match('/offline.html');
                 }
+
             })()
         );
-    } else if (CACHE_FILES.includes(e.request.url)) {
-        // console.log('ueh');
-        e.respondWith(caches.match(e.request));
+    } else if (CACHE_FILES.includes(event.request.url)) {
+        event.respondWith(caches.match(event.request));
     }
 });
