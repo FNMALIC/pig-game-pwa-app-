@@ -3,7 +3,7 @@
     "short_name":"P🎲G(PWA)",
     "icons":[
         {
-            "src": "/assets/images/icons/512.png",
+            "src": "assets/images/icons/512.png",
             "type":"image/png",
             "sizes":"512x512"
         }
