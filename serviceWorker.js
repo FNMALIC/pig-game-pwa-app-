@@ -1,15 +1,13 @@
-const PREF = "P_Gv1.4.1";
+const PREF = "P_Gv1.5";
 const BASE_URL = location.protocol + "//" + location.host;
 const CACHE_FILES = [
-    BASE_URL + "/assets/css/style.css",
-    BASE_URL + "/assets/js/script.js",
-    BASE_URL + "/assets/images/icons/512.png",
+    BASE_URL + "assets/css/style.css",
+    BASE_URL + "assets/js/script.js",
+    BASE_URL + "assets/images/icons/512.png",
     "https://fonts.googleapis.com/css2?family=Nunito&display=swap"
 ];
 
-console.log(BASE_URL + "/assets/css/style.css");
-console.log(BASE_URL + "/assets/js/script.js");
-console.log(BASE_URL + "/assets/images/icons/512.png");
+
 self.addEventListener("install", (event) => {
     self.skipWaiting();
     event.waitUntill((async () => {
