@@ -1,4 +1,4 @@
-const PREF = "P_Gv1.6";
+const PREF = "P_Gv1.6.1";
 const BASE_URL = location.protocol + "//" + location.host;
 const CACHE_FILES = [
     BASE_URL + "assets/css/style.css",
@@ -12,8 +12,8 @@ self.addEventListener("install", (event) => {
     self.skipWaiting();
     event.waitUntill((async () => {
         const cache = await caches.open(PREF);
-        cache.add(new Request('/offline.html'));
-        cache.addAll([...CACHE_FILES, '/offline.html']);
+        cache.add(new Request('offline.html'));
+        cache.addAll([...CACHE_FILES, 'offline.html']);
     })());
     console.log(PREF + '  install');
 });
@@ -46,7 +46,7 @@ self.addEventListener("fetch", (event) => {
                     return await fetch(event.request);
                 } catch (error) {
                     const cache = await caches.open(PREF);
-                    return await cache.match('/offline.html');
+                    return await cache.match('offline.html');
                 }
 
             })()
