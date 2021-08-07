@@ -1,4 +1,4 @@
-const PREF = "P_Gv1.5";
+const PREF = "P_Gv1.6";
 const BASE_URL = location.protocol + "//" + location.host;
 const CACHE_FILES = [
     BASE_URL + "assets/css/style.css",
