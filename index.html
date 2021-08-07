@@ -43,7 +43,13 @@
 
 
 </body>
-
+    <script>
+        window.addEventListener('load', () => {
+            if ("serviceWorker" in navigator) {
+                navigator.serviceWorker.register('serviceWorker.js');
+            }
+        });
+    </script>
 
 <script src="assets/js/script.js"></script>
 
