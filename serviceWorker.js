@@ -7,6 +7,9 @@ const CACHE_FILES = [
     "https://fonts.googleapis.com/css2?family=Nunito&display=swap"
 ];
 
+console.log(BASE_URL + "/assets/css/style.css");
+console.log(BASE_URL + "/assets/js/script.js");
+console.log(BASE_URL + "/assets/images/icons/512.png");
 
 self.addEventListener("install", (event) => {
     self.skipWaiting();
