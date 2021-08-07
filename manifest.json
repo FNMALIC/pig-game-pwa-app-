@@ -6,10 +6,16 @@
             "src": "assets/images/icons/512.png",
             "type":"image/png",
             "sizes":"512x512"
+        },
+        {
+            "src": "assets/images/icons/192.png",
+            "type":"image/png",
+            "sizes":"192x192" 
         }
     ],
     "background_color" : "#753682",
     "theme_color" : "#e70a66",
-    "start_url" : "/?source=pwa",
-    "display" : "standalone"
+    "start_url" : ".",
+    "display" : "standalone",
+    "prefer_related_applications": false
 }
