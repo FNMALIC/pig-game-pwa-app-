@@ -97,25 +97,25 @@ btnHold.addEventListener('click', function () {
         }
     }
 });
-// window.addEventListener('load', () => {
-//     // var specify_players = alert("Do you want to specify the players names?");
+window.addEventListener('load', () => {
+    // var specify_players = alert("Do you want to specify the players names?");
 
-//     var name_0 = prompt("Enter the name of the first player");
-//     var name_1 = prompt("Enter the name of the second player");
-//     if ((name_0 == "" && name_1 == "") || (name_0 == null && name_1 == null)) {
-//         document.getElementById('name--0').innerHTML = "Player 1";
-//         document.getElementById('name--1').innerHTML = "Player 2";
-//     } else if ((name_0 == "" && name_1 != "") || (name_0 == null && name_1 != null)) {
-//         document.getElementById('name--0').innerHTML = "Player 1";
-//         document.getElementById('name--1').innerHTML = name_1;
-//     } else if ((name_0 != "" && name_1 == "") || (name_0 != null && name_1 == null)) {
-//         document.getElementById('name--0').innerHTML = name_0;
-//         document.getElementById('name--1').innerHTML = "Player 2";
-//     } else {
-//         document.getElementById('name--0').innerHTML = name_0;
-//         document.getElementById('name--1').innerHTML = name_1;
-//     }
+    var name_0 = prompt("Enter the name of the first player");
+    var name_1 = prompt("Enter the name of the second player");
+    if ((name_0 == "" && name_1 == "") || (name_0 == null && name_1 == null)) {
+        document.getElementById('name--0').innerHTML = "Player 1";
+        document.getElementById('name--1').innerHTML = "Player 2";
+    } else if ((name_0 == "" && name_1 != "") || (name_0 == null && name_1 != null)) {
+        document.getElementById('name--0').innerHTML = "Player 1";
+        document.getElementById('name--1').innerHTML = name_1;
+    } else if ((name_0 != "" && name_1 == "") || (name_0 != null && name_1 == null)) {
+        document.getElementById('name--0').innerHTML = name_0;
+        document.getElementById('name--1').innerHTML = "Player 2";
+    } else {
+        document.getElementById('name--0').innerHTML = name_0;
+        document.getElementById('name--1').innerHTML = name_1;
+    }
 
-// });
+});
 
 btnNew.addEventListener('click', init);

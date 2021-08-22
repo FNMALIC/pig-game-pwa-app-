@@ -1,8 +1,6 @@
 const PREF = "P_Gv1.6.1";
 // const BASE_URL = location.protocol + "//" + location.host;
 const CACHE_FILES = [
-    "assets/css/style.css",
-    "assets/js/script.js",
     "assets/images/icons/512.png",
     "https://fonts.googleapis.com/css2?family=Nunito&display=swap"
 ];
