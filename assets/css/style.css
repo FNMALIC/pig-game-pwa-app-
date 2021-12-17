@@ -27,7 +27,7 @@ main {
     color: #e70a66;
     position: relative;
     width: 100rem;
-    height: 60rem;
+    height: 51rem;
     background-color: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(200px);
     filter: blur();
@@ -35,6 +35,9 @@ main {
     border-radius: 9px;
     overflow: hidden;
     display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    align-items: center;
 }
 
 .player {
@@ -49,16 +52,16 @@ main {
 /* ELEMENTS */
 .name {
     position: relative;
-    font-size: 4rem;
+    font-size: 2rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    word-spacing: 2px;
+    letter-spacing: 2px;
+    word-spacing: 5px;
     font-weight: 300;
     margin-bottom: 1rem;
 }
 
 .score {
-    font-size: 8rem;
+    font-size: 6rem;
     font-weight: 300;
     color: #c7365f;
     margin-bottom: auto;
@@ -94,7 +97,7 @@ main {
 .current-label {
     text-transform: uppercase;
     margin-bottom: 1rem;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     color: #ddd;
 }
 
@@ -111,17 +114,15 @@ main {
     background: none;
     border: none;
     font-family: inherit;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     cursor: pointer;
-    font-weight: 400;
+    font-weight: 500;
     transition: all 0.2s;
-
     background-color: white;
     background-color: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(10px);
-
-    padding: 0.7rem 2.5rem;
+    padding: 0.7rem 2.1rem;
     border-radius: 50rem;
     box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
@@ -137,11 +138,11 @@ main {
 }
 
 .btn--roll {
-    top: 39.3rem;
+    top: 32.3rem;
 }
 
 .btn--hold {
-    top: 46.1rem;
+    top: 38.1rem;
 }
 
 .btn:active {
