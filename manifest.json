@@ -15,7 +15,7 @@
     ],
     "background_color" : "#753682",
     "theme_color" : "#e70a66",
-    "start_url" : "/",
+    "start_url" : ".",
     "display" : "fullscreen",
     "prefer_related_applications": false,
     "orientation":"landscape-primary"
